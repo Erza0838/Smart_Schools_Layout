@@ -1,0 +1,1047 @@
+/*Bagian body*/
+	body
+	{
+		margin: 0;
+		padding: 0;
+		height: 50vh;
+		/* untuk menyembunyikan horizontal scroll*/
+		overflow-x: hidden;
+		/*overflow-y: scroll;*/
+		/*background: var(--body-color);*/
+	}
+
+		/*Bagian @media query*/
+			@media screen and (max-width: 375px 390px 384px 414px) and (max-height: 667px 844px 854px 896px)
+			{	
+			  body 
+				{
+				 margin: 0;
+				 height: 25vh;
+				 width: 100%;
+				 overflow-x: none;
+				 /*overflow-y: hidden;*/
+				}
+		   }
+
+		   @media screen and (min-width: 360px) and (min-height: 760px)
+		   {
+		   	 body
+		   	 {
+		   	  margin: 0;
+			  height: 25vmin;
+			  width: 100%;
+			  overflow-x: hidden;
+			  /*overflow-y: hidden;*/
+			   	 }
+	}
+
+		/*Akhir bagian @media query*/
+
+/*Akhir bagian body*/
+
+
+
+/*Bagian CSS Variable*/
+
+/*root berlaku untuk elemen di semua halaman ini*/
+:root
+{
+	/*Variable untuk bagian icon pada top bar*/
+	--Icon-Color: hsla(0, 120%, 70%, 1.0);
+	/*Akhir baris Variable bagian icon pada top bar*/	
+
+	/*Variable pada bagian icon presensi*/
+	--Icon_Font_var: 'Raleway', sans-serif;
+	/*Akhir baris variable icon presensi*/
+
+
+		/*Variable untuk icon pada fitur - fitur*/
+
+			/*Variable untuk warna*/
+			--Fiture_Icon_Color: linear-gradient( rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0));
+			/*Bagian akhir Variable untuk warna*/
+
+			/*Variable untuk box sadhow*/
+			--Icon_Shadow_Effect: 0.3em 0.4em 0.8em rgba(150, 150, 150, 1.0);
+			/*Bagian akhir Variable untuk Box shadow*/
+
+			/*Variable untuk Cursor Pointer*/
+			--Point_Device: pointer;
+			/*Bagian akhir Variable untuk Cursor Pointer*/
+
+			/*Variable untuk warna putih*/
+			--Bg-White: rgba(255, 255, 255, 1.0);
+			--Bg-White-Lite: rgba(255, 255, 255, .5);
+			/*/*Bagian akhir Variable untuk warna putih*/
+		/*Akhir baris Variable icon fitur - fitur*/
+
+}
+
+:root
+{
+	/*Variable pada bagian hover*/
+	--Hover_Backgound_Transform: scale(1, 1) translateY(-.9vh);
+	/*Akhir Variable pada bagian hover*/
+}
+/*Akhir bagian CSS Variable*/
+
+
+/*@font-face untuk judul*/
+	@font-face
+	{
+		font-family: "Pt_Sans", serif;
+		src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+	}
+/*Baris akhir @font-face untuk judul*/
+
+/*Bagian scroll Bar*/
+	/* width */
+	::-webkit-scrollbar
+	{
+	  width: .8em;
+	  height: .4rem;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+	{
+	  background: hsla(0, 120%, 70%, .8);
+	  border-radius: 1ex;
+	}
+
+	/*Hover*/
+	::-webkit-scrollbar-thumb:hover
+	{
+	  background: hsla(17, 46%, 34%, .9);
+	}
+/*Akhir bagian scroll Bar*/
+
+/*Untuk bagian top bar*/
+	.main_nav
+	{
+		background: linear-gradient( 40deg,rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0), rgba(100, 90, 200, 1.0) );
+		position: relative;
+		top: 0;
+		width: 100%;
+		height: 34vh;
+		/*z-index: 2;*/
+	}
+
+		/*Bagian @media query untuk main_nav*/
+		@media screen and (max-width: 375px 390px 384px 414px) and (max-height: 667px 844px 854px 896px)
+		{
+		 .main_nav
+			{
+			 background: linear-gradient( 35deg,rgba(120, 200, 240, 1.0), rgba(100, 200, 240, 1.0), rgba(100, 90, 200, 1.0) );
+			 position: relative;
+			 top: 0;
+			 width: 100%;
+			 height: 13vh;
+			 padding: 1ex;
+			}			
+		}
+		/*Akhir bagian @media query main_nav*/
+
+	.main_text
+	{		
+		color: var(--Bg-White);
+		text-shadow: 0.5vw 0.4vh 0.6vh hsla(200, 5%, 10%, 0.9);
+		font-family: var(--Icon_Font_var);
+		font-size: 1.9rem;
+		margin: auto;
+		margin-top: -3vh;
+		padding-top: 3vh;
+		text-align: center;
+		display: flex;
+  		justify-content: center;
+
+	}
+		/*Bagian @media query untuk main_text*/
+		@media screen and (max-width: 375px 390px 384px 414px) and (max-height: 667px 844px 854px 896px)
+		{
+			.main_text
+			{		
+			 color: rgba(253, 253, 253, 1.0);
+			 text-shadow: 0.5vw 0.4vh 0.6vh hsla(200, 5%, 10%, 0.9);
+			 font-family: "Pt_Sans", serif;
+			 font-weight: bold;
+			 font-size: 1.8rem;
+			 margin: auto;
+			 margin-top: -3vh;
+			 padding-top: 4vh;
+			 /*text-align: center;*/
+			 display: flex;
+  			 justify-content: center;
+			}		
+		}
+
+		@media screen and (min-width: 360px) and (min-height: 760px)
+		{
+			.main_text
+			{		
+			 color: rgba(253, 253, 253, 1.0);
+			 text-shadow: 0.5vw 0.4vh 0.6vh hsla(200, 5%, 10%, 0.9);
+			 font-family: var(--Icon_Font_var);
+			 font-size: 1.4rem;
+			 margin: auto;
+			 margin-top: 2vh;
+			 padding-top: 3vh;
+			 display: flex;
+  			 justify-content: center;
+			}			
+		}
+		/*Akhir bagian @media query untuk main_text*/
+
+	/*Bagian @media query untuk Judul header*/
+	@media screen and (max-width: 375px 390px 384px 414px) and (max-height: 667px 844px 854px 896px)
+	{
+		.main_nav > .main_text
+		{		
+			color: var(--Bg-White);
+			text-shadow: 0.5vw 0.4vh 0.6vh hsla(200, 5%, 10%, 0.9);
+			font-family: var(--Icon_Font_var);
+			font-size: clamp(1.6rem, 2vw, 2rem);
+			margin: auto;
+			margin-top: -3vh;
+			padding-top: 3vh;
+			text-align: center;
+			/*transform: translateY(2ex);*/
+		}
+	}
+	/*Akhir bagian @meida query untuk Judul header*/
+
+	.container
+	{	
+		background-color: var(--Bg-White);
+		position: relative;
+		top: -8vh;
+		border-radius: 30px;
+		height: 100vh;
+		width: 100%;
+		min-width: 35vmin;
+		min-height: 30vmin;
+	}
+
+	/*Bagian @media query untuk bagian container*/
+	@media screen and (max-width: 412px) and (max-height: 915px)
+	{
+		.container
+		{	
+			background-color: var(--Bg-White);
+			transform: translateY(-2vh);
+			position: relative;
+			top: -5vh;
+			border-radius: 2.1rem;
+			height: 100vh;
+			width: 100%;
+			min-width: 35vmin;
+			min-height: 30vmin;
+		}
+
+		.news_thumbnail
+		{		
+			border-radius: 2em;
+			position: absolute;
+			top: -1vmin;
+			display: flex;
+			justify-content: center;
+			width: 20vw;
+			height: 25vh;
+			box-shadow: 1vw 0.8vw 0.9em 0.1em rgba(180, 180, 180, 0.8);
+			transform: translateY(-2vh);
+			object-fit: scale-down;
+			object-position: top right left;
+			box-sizing: border-box;
+		}
+	}
+
+	@media screen and (max-width:375px 390px 412px) and (max-height: 667px 844px 915px)
+	{
+		.container
+		{	
+			background-color: var(--Bg-White);
+			transform: translateY(1vh);
+			position: relative;
+			top: -4vh;
+			border-radius: 1.5rem;
+			height: 100vh;
+			width: 100%;
+			min-width: 35vmin;
+			min-height: 30vmin;
+		}
+
+		.news_thumbnail
+		{		
+			border-radius: 3em;
+			position: absolute;
+			top: -2vmin;
+			display: flex;
+			justify-content: center;
+			width: 10vw;
+			height: 10vh;
+			box-shadow: 1vw 0.8vw 0.9em 0.1em rgba(180, 180, 180, 0.8);
+			transform: translateY(-2vh);
+			object-fit: cover;
+			object-position: top right left;
+			box-sizing: border-box;
+		}		
+	}
+	/*Akhir bagian @meida query untuk Judul header*/
+
+	.second_container
+	{	
+		background-color: white;
+		position: relative;
+		top: -42vh;
+		border-radius: 30px;
+		height: 100vh;
+		width: 100%;
+	}
+/*Akhir bagian top bar*/
+	
+	/*Bagian Footer*/
+		.footer
+		{	
+			position: relative;
+			bottom: -47vh;
+			width: 100%;
+			height: 20vh;
+			background: linear-gradient( 40deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0), rgba(100, 90, 200, 1.0) );
+			/*z-index: 2;*/
+		}
+	/*Akhir bagian Footer*/
+
+		/*Bagian @media query untuk Footer*/
+		@media screen and(max-width: 912px) and (max-width: 1012px)
+		{
+			.footer
+			{
+				position: relative;
+				bottom: -47vh;
+				width: 100%;
+				height: 10vh;
+				background: linear-gradient( 45deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, .8), rgba(100, 90, 200, .8) );
+			}	
+		}
+		/*Akhir bagian @media query*/
+
+
+/*Bagian navigasi*/
+.nav_button, li
+{
+	position: relative;
+	top: 1vh;
+	display: inline-block;
+	list-style: none;
+	margin-left: 11vw;
+}
+
+.icons_size
+{	
+	cursor: var(--Point_Device);
+	width: 3vw;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0.0.4vh;
+	background-color: var(--Bg-White);
+	border-radius: .6em;
+	padding: 1vh;
+	border: 0.2em solid var(--Bg-White);
+	z-index: 2;
+}
+
+section.bg-colors	
+{
+	width: 3vw;
+	box-sizing: border-box;
+	position: relative;
+	bottom: 1.7vh;
+	background-color: var(--Bg-White-Lite);
+	border-radius: .6em;
+	padding: 2.7vh;
+	transform: var(--Hover_Backgound_Transform);
+}
+
+	/*Bagian hover untuk icon icon*/
+	.icons_size:hover
+	{
+		transform: scale(1.2, 1.2) translateY(-.8rem);
+		transition: 2s;
+		background: var(--Icon-Color);
+	}
+	/*Akhir bagian hover*/
+
+
+/*Bagian @media query untuk bagian navigasi dan child class nya*/
+@media screen and (max-width: 375px 390px 384px 414px) and (max-height: 667px 844px 854px 915px)
+{
+	.nav_button, li
+	{
+		position: relative;
+		top: 1vh;
+		left: -10vw;
+		right: 2vw;
+		list-style: none;
+		display: flex;
+	}
+
+	.icons_size
+	{	
+		width: 5vw;
+		align-items: center;
+		justify-content: space-around, flex-start;
+		flex-wrap: nowrap;
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 0.0.4vh;
+		background-color: var(--Bg-White);
+		border-radius: .6em;
+		padding: 2vh;
+		padding-right: 1vw;
+		border: 0.2em solid var(--Bg-White);
+		z-index: 2;
+	}
+
+	.font_home
+	{
+		color: white;
+		font-family: "Pt_Sans", serif;
+		font-size: 1em;
+		position: relative;
+		top: initial;
+		left: 0.0.9vw;
+	}
+
+	section.bg-colors	
+	{
+		width: 4vw;
+		justify-content: center;
+		box-sizing: border-box;
+		position: absolute;
+		top: 15vh;
+		background-color: var(--Bg-White-Lite);
+		border-radius: .4em;
+		padding: 1vh;
+		border: 0.2em solid var(--Bg-White);
+		z-index: -2;
+		visibility: none;
+	}
+}
+	@media screen and (min-width: 360px) and (min-height: 760px)
+	{
+		.nav_button, li
+		{	
+			position: relative;
+			top: 1vh;
+			left: -13vw;
+			list-style: none;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+
+		.icons_size
+		{	
+			width: 5vw;
+			flex: 3;
+			justify-content: space-around;
+			box-sizing: border-box;
+			position: absolute;
+			left: 5vw;
+			right: -5vw;	
+			top: 1vh;
+			background-color: var(--Bg-White);
+			border-radius: 7px;
+			padding: 2vh;
+			border: 0.2em solid var(--Bg-White);
+			z-index: 2;
+		}	
+
+		.bg-colors	
+		{
+			width: 6vw;
+			display: flex;
+			justify-content: center;
+			box-sizing: border-box;
+			position: absolute;
+			top: inherit;
+			right: inherit;
+			background-color: var(--Bg-White);
+			border-radius: 0.6em;
+			padding: 2vh;
+			border: 0.2em solid var(--Bg-White);
+			z-index: -2;
+			visibility: none;
+		}
+	}
+/*Akhir Bagian @media query untuk bagian navigasi dan child class nya*/
+
+	.left_nav
+	{
+		position: relative;
+		left: 15vw;
+		top: 8vh;
+	}
+/*Akhir bagian navigasi*/
+
+	/*Hover pada navigasi*/
+
+	/*Bagian akhir hover navigasi*/
+
+/*Bagian berita*/
+.news_thumbnail
+{	
+	border-radius: 25px;
+	position: relative;
+	top: -2vmin;
+	left: 12vw;
+	max-width: 82vw;
+	min-width: 66vw;
+	max-height: 60vh;
+	min-height: 56vh;
+	width: 78vw;
+	height: 60vh;
+	box-shadow: 1vw 0.8vw 0.7em 0.1em rgba(190, 190, 190, 0.8);
+	transform: translate(-1vw, 1.1vh);
+	object-fit: fill;
+	object-position: top right left;
+	box-sizing: border-box;
+}
+	/*Bagian dekorasi untuk berita*/
+		#thumbnail_interface
+		{
+			position: absolute;
+			/*margin-top: 1vh;
+			top: 0vh;*/
+			/*left: 10vw;*/
+			display: inline-block;
+			float: left;
+			border-bottom: 1em solid hsla(0, 120%, 70%, 0.8);
+			z-index: 4;
+		}
+	/*Akhir dekorasi untuk berita*/
+
+.image_page
+{
+	margin-top: -50vh;
+}
+/*Akhir bagian berita
+
+	/*Bagian untuk mengakses fitur fitur lewat link*/
+		.side-margin
+		{
+			position: relative;
+			left: 25vw;
+			top: 8vh;
+		}
+
+		.margin-side
+		{
+			position: relative;
+			left: 26vw;
+			top: -3vh;
+		}
+
+		.margin-left
+		{
+			position: relative;
+			left: 25vw;
+			top: 2vh;
+		}
+
+		.side-margin-left
+		{
+			position: relative;
+			left: 40vw;
+			top: -3vh;
+		}
+
+		.side-left
+		{
+			position: relative;
+			left: 7vw;
+			top: -3vh;	
+		}
+
+		.button_fiture
+		{	
+			background: var(--Fiture_Icon_Color);
+			display: inline-block;
+			padding: 1.1vh;
+			padding-left: 1vw;
+			width: 4vw;
+			height: 8vh;
+			border-radius: 10px;
+			position: relative;
+			/*top: 2vh;*/
+			box-shadow: var(--Icon_Shadow_Effect);
+		}
+
+		.wallet_button
+		{	
+			background: var(--Fiture_Icon_Color);
+			display: inline-block;
+			padding: 1.1vh;
+			padding-left: 1vw;
+			width: 4vw;
+			height: 8vh;
+			border-radius: 10px;
+			position: relative;
+			float: right;
+			/*clear: right;*/
+			left: -82vw;			
+			/*top: 10vh;*/
+			box-shadow: var(--Icon_Shadow_Effect);
+		}
+
+		.anounce_button
+		{	
+			background: var(--Fiture_Icon_Color);
+			display: inline-block;
+			padding: 1.1vh;
+			padding-left: 1vw;
+			width: 4vw;
+			height: 8vh;
+			border-radius: 10px;
+			position: absolute;
+			float: right;
+			/*clear: left;*/
+			left: 60vw;			
+			/*top: -3vh;*/
+			box-shadow: var(--Icon_Shadow_Effect);
+		}
+
+		.schedule_button
+		{	
+			background: var(--Fiture_Icon_Color);
+			display: inline-block;
+			padding: 1.1vh;
+			padding-left: 1vw;
+			width: 4vw;
+			height: 8vh;
+			border-radius: 10px;
+			position: absolute;
+			float: right;
+			left: 12vw;			
+			/*clear: left;
+			/*top: 69vh;*/
+			box-shadow: var(--Icon_Shadow_Effect);
+		}
+	/*Akhir bagian link*/
+
+	/*Bagian font style link*/
+	.button_style
+	{
+		font-size: ;
+		font-size: 2em;
+	}
+
+	/*Icon Pada Top bar*/
+	.font_home
+	{
+		color: white;
+		font-family: "Pt_Sans", serif;
+		font-size: 1em;
+		position: relative;
+		top: 7vh;
+		left: 0.0.9vw;
+	}
+
+		.font_chat
+		{
+			color: white;
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 7vh;
+			left: 0.4vw;
+		}
+
+	.font_notification
+	{
+		color: white;
+		font-family: "Pt_Sans", serif;
+		font-size: 1em;
+		position: relative;
+		top: 7vh;
+		left: -0.4vw;
+	}		
+
+		.font_account
+		{
+			color: white;
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 7vh;
+			left: 0.2vw;
+		}
+	/*Baris akhir Icon pada Top bar*/
+
+		.name_button
+		{	
+			color: rgba(50, 50, 50, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1rem;
+			font-weight: normal;
+			position: absolute;
+			top: 12vh;
+			left: 0.6vw;
+		}
+
+		.payment_font
+		{	
+			color: rgba(50, 50, 50, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1rem;
+			font-weight: normal;
+			font-weight: bold;
+			position: absolute;
+			top: 7vh;
+			left: 12vw;
+		}
+
+		.schedule_font
+		{	
+			color: rgba(50, 50, 50, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1rem;
+			font-weight: normal;
+			position: absolute;
+			top: 12vh;
+			left: 13vw;
+		}
+
+		.payment_font
+		{	
+			color: rgba(50, 50, 50, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1rem;
+			font-weight: normal;
+			position: absolute;
+			top: 12vh;
+			left: 11vw;
+		}
+
+		.anounce_font
+		{	
+			color: rgba(50, 50, 50, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1rem;
+			font-weight: normal;
+			position: absolute;
+			top: 12vh;
+			left: 59vw;
+		}
+	/*Akhir bagian font style*/
+
+/*Bagian untuk jadwal pelajaran*/
+	.schedule_section
+	{
+		position: relative;
+		top: -98vh;
+		left: 0.8vw;
+		right: 0.9vw;
+		width: 100%;
+		background: none;
+	}
+
+	.lesson_logo
+	{
+		position: absolute;
+		left: 8vw;
+		display: block;
+	}
+
+	.subjects
+	{
+		font-size: 1.5em;
+		font-family: "Pt_Sans", serif;
+		font-weight: none;
+		position: absolute;
+		top: .2vh;
+		left: 13vw;
+	}
+	.subjects_date
+	{
+		font-size: 1.5em;
+		font-family: "Pt_Sans", serif;
+		font-weight: none;
+		color: hsla(200, 100%, 50%, 1.0);
+		position: absolute;
+		/*top: 10vh;*/
+		left: 75vw;
+		float: none;
+	}
+
+	/*Bagian untuk daftar pelajaran dan durasinya*/
+
+
+	/*Pelajaran Matematika*/
+
+	/*Bagian Pembungkus keterengan jadwal*/
+	.subjects_list
+	{
+		position: relative;
+		top: -88vh;
+		left: -5vw;
+		/*display: flex;*/
+		transform: translateY(1vh);
+	}
+	/*Baris akhir pembungkus keterangan jadwal*/
+
+		#subjects_name_00
+		{
+			font-size: 1.2em;
+			font-family: 'Raleway', sans-serif;
+			position: absolute;
+			display: block;
+			/*flex-wrap: wrap;*/
+		}
+		
+		#subjects_duration_00
+		{
+			font-size: 1.1em;
+			font-family: 'Raleway', sans-serif;
+			display: inline;
+			position: absolute;
+			left: 57vw;
+			display: block;
+			/*margin-left: 10vw;*/
+			transform: translateX(21vw);
+			/*flex-wrap: wrap;*/
+		}		
+			/*Nama Guru Pengajar*/
+				.teacher_name
+				{
+					float: left;
+					position: absolute;
+					top: 4vh;
+					left: 14vw;
+					font-family: 'Raleway', sans-serif;
+					font-size: .8em;
+					font-weight: bold;
+					color: hsla(40, 20%, 40%, 0.5);
+					display: inline;
+				}
+/*Pelajaran Kimia*/
+.wrapper
+	{
+		position: relative;
+		top: -80vh;
+		left: -5vw;
+		transform: translateY(2vh);
+	}	
+		#subjects_name_01
+		{
+			font-size: 1.1em;
+			font-family: 'Raleway', sans-serif;
+			position: absolute;
+			display: block;
+			/*left: -2vw;*/
+			/*flex-wrap: wrap;*/
+		}
+		
+		#subjects_duration_01
+		{
+			font-size: 1.1em;
+			font-family: 'Raleway', sans-serif;
+			position: absolute;
+			left: 57vw;
+			transform: translateX(21vw);
+			display: block;
+
+			/*flex-wrap: wrap;*/
+		}		
+			/*Nama Guru Pengajar*/
+				.teacher_name1
+				{
+					float: left;
+					position: absolute;
+					top: 4vh;
+					left: 14vw;
+					font-family: 'Raleway', sans-serif;
+					font-size: .8em;
+					font-weight: bold;
+					color: hsla(40, 20%, 40%, 0.5);
+					display: inline;
+				}				
+	
+	/*Pelajaran Fisika*/
+	.wrapper_1
+	{
+		position: relative;
+		top: -70vh;
+		left: -5vw;
+		/*display: flex;*/
+		transform: translateY(2vh);
+	}	
+		#subjects_name_02
+		{
+			font-size: 1.1em;
+			font-family: 'Raleway', sans-serif;
+			position: absolute;
+			display: block;
+			/*left: -2vw;*/
+			/*flex-wrap: wrap;*/
+		}
+		
+		#subjects_duration_02
+		{
+			font-size: 1.1em;
+			font-family: 'Raleway', sans-serif;
+			display: block;
+			position: absolute;
+			left: 57vw;
+			transform: translateX(21vw);
+			/*display: inline-block;*/
+			/*flex-wrap: wrap;*/
+		}		
+			/*Nama Guru Pengajar*/
+				.teacher_name_2
+				{
+					float: left;
+					position: absolute;
+					top: 4vh;
+					left: 14vw;
+					font-family: 'Raleway', sans-serif;
+					font-size: .8em;
+					font-weight: bold;
+					color: hsla(40, 20%, 40%, 0.5);
+					display: inline;
+				}
+
+/*Pelajaran Bhs Inggris*/
+.english-subject-wrapper
+{
+	position: relative;
+	top: -60vh;
+	left: -5vw;
+	transform: translateY(2vh);
+}
+
+#subjects_name_03
+{
+	font-size: 1.1em;
+	font-family: 'Raleway', sans-serif;
+	position: absolute;
+	display: block;
+	/*left: -2vw;*/
+	/*flex-wrap: wrap;*/
+}
+		
+#subjects_duration_03
+{
+	font-size: 1.1em;
+	font-family: 'Raleway', sans-serif;
+	display: block;
+	position: absolute;
+	left: 57vw;
+	transform: translateX(21vw);
+	/*display: inline-block;*/
+	/*flex-wrap: wrap;*/
+}		
+
+/*Nama Guru Pengajar*/
+.teacher_name_3
+{
+	float: left;
+	position: absolute;
+	top: 4vh;
+	left: 14vw;
+	font-family: 'Raleway', sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	color: hsla(40, 20%, 40%, 0.5);
+	display: inline;
+}										
+	
+	/*Pelajaran Bhs Jawa*/
+	.Javanese-subject-wrapper
+	{
+		position: relative;
+		top: -50vh;
+		left: -5vw;
+		transform: translateY(2vh);
+	}
+
+	#subjects_name_04
+	{
+		font-size: 1.1em;
+		font-family: 'Raleway', sans-serif;
+		position: absolute;
+		display: block;
+		/*left: -2vw;*/
+		/*flex-wrap: wrap;*/
+	}
+
+	#subjects_duration_04
+	{
+		font-size: 1.1em;
+		font-family: 'Raleway', sans-serif;
+		display: block;
+		position: absolute;
+		left: 57vw;
+		transform: translateX(21vw);
+		/*display: inline-block;*/
+		/*flex-wrap: wrap;*/
+	}		
+
+	/*Nama Guru Pengajar*/
+	.teacher_name_4
+	{
+		float: left;
+		position: absolute;
+		top: 1vh;
+		left: -8vw;
+		transform: translateX(8vw);
+		font-family: 'Raleway', sans-serif;
+		font-size: .8em;
+		font-weight: bold;
+		color: hsla(40, 20%, 40%, 0.5);
+		display: inline;
+	}	
+/*Pelajaran Penjasorkers*/
+.Sport-subject-wrapper
+{
+	position: relative;
+	top: -40vh;
+	left: -5vw;
+	transform: translateY(-2vh);
+}
+
+#subjects_name_05
+{
+	font-size: 1.1em;
+	font-family: 'Raleway', sans-serif;
+	position: absolute;
+	display: block;
+	/*left: -2vw;*/
+	/*flex-wrap: wrap;*/
+}
+		
+#subjects_duration_05
+{
+	font-size: 1.1em;
+	font-family: 'Raleway', sans-serif;
+	display: block;
+	position: absolute;
+	left: 57vw;
+	transform: translateX(21vw);
+	/*flex-wrap: wrap;*/
+}		
+/*Nama Guru Pengajar*/
+.teacher_name_5
+{
+	float: left;
+	position: absolute;
+	top: 4vh;
+	left: 14vw;
+	font-family: 'Raleway', sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	color: hsla(40, 20%, 40%, 0.5);
+	display: inline;
+}										
+/*Bagian akhir jadwal pelajatan*/
+		

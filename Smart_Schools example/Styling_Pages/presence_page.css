@@ -1,0 +1,757 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	/*overflow-x: hidden; untuk menyembunyikan horizontal scroll*/
+	overflow-x: hidden;
+}
+
+/*Bagian CSS Variable*/
+	:root
+	{	
+		/*Variable untuk icon di top bar*/
+		--Icon-Color: hsla(0, 120%, 70%, 1.0);
+		/*Baris akhir Variable untuk icon di top bar*/
+
+		/*Variable untuk bagian header*/
+
+			/*Variable untuk (Box-shadow) pada top bar "Presensi" */
+			--Shadow_Style_Title: 0.5vw 0.4vh 0.6vh hsla(200, 5%, 10%, 0.9);
+			/*Akhir variable untuk (Box-Shadow)*/
+
+		/*Baris akhir Variable untuk bagian header*/
+	}
+
+:root 
+{
+	/*Variable pada bagian hover*/
+	--Hover_Background_Transform: scale(1, 1) translateY(-.9vh);
+	/*Akhir Variable pada hover*/
+}	
+/*Akhir baris CSS Variable*/
+
+
+	/*Bagian scroll Bar*/
+		/* width */
+		::-webkit-scrollbar
+		{
+		  width: .8em;
+		  height: .4rem;
+		}
+
+		/* Handle */
+		::-webkit-scrollbar-thumb 
+		{
+		  background: hsla(0, 120%, 70%, 0.8);
+		  border-radius: 1ex;
+		}
+
+		/*Hover*/
+		::-webkit-scrollbar-thumb:hover
+		{
+		  background: hsla(17, 46%, 34%, .9);
+		}
+	/*Akhir bagian scroll Bar*/
+
+/*Bagian @font-face*/
+@font-face
+{
+	font-family: "Pt_Sans", serif;
+	src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+}
+/*Akhr bagian @font_face*/
+
+/*Bagian header*/
+.Presence_top_bar
+{
+	width: 100%;
+	height: 38vh;
+	background: linear-gradient(30deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0));
+	position: relative;
+	top: -5vh;
+	transform: translateY(-3vh);
+}
+
+.title_header
+{
+	color: rgba(255, 255, 255, 1.0);
+	text-shadow: var(--Shadow_Style_Title);
+	font-family: "Pt_Sans", serif;
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+	top: 2vh;
+	transform: translateY(1vh);
+}
+
+.date_month
+{
+	color: rgba(255, 255, 255, 1.0);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: absolute;
+	top: 26vh;
+	left: 2vw;
+	transform: translateY(-1vh);
+}
+
+.edit_month
+{
+	color: rgba(255, 255, 255, 1.0);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: absolute;
+	right: 7vw;
+	top: 26vh;
+	float: right;
+	clear: left;
+	transform: translateY(-1vh);
+}
+	/*Bagian tombol Navigasi*/
+		.redirect_button, li
+		{
+			position: relative;
+			top: 0.8vh;
+			display: inline-block;
+			list-style: none;
+			margin-left: 11vw;
+		}
+			.icon_button_size
+			{
+				width: 3vw;
+				box-sizing: border-box;
+				position: absolute;
+				top: -2vh;
+				left: -3vw;
+				bottom: 0.0.04vh;
+				background-color: rgba(255, 255, 255, 1.0);
+				border-radius: 0.6em;
+				padding: 1vh;
+				border: 0.2em solid rgba(255, 255, 255, 1.0);
+				z-index: 2;
+			}
+
+			.bg-coolors
+			{	
+				width: 3vw;
+				box-sizing: border-box;
+				position: relative;
+				bottom: 1.7vh;
+				left: -3vw;
+				background-color: rgba(255, 255, 255, .7);
+				border-radius: 0.6em;
+				padding: 2vh;
+				transform: var(--Hover_Background_Transform);
+			}
+
+			/*Bagian hover untuk icon icon*/
+			.icon_button_size:hover
+			{
+				transform: scale(1.2,1.2) translateY(-1rem);
+				transition: 2s;
+				background: var(--Icon-Color);
+			}	
+			/*Akhir bagian hover*/
+
+		.Home_btn
+		{
+			color: rgba(255, 255, 255, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 5vh;
+			left: -3vw;
+		}
+
+		.Chat_btn
+		{
+			color: rgba(255, 255, 255, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 5vh;
+			left: -3vw;
+		}
+
+		.Notification_btn
+		{
+			color: rgba(255, 255, 255, 1.0);			
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 5vh;
+			left: -3.5vw;
+		}	
+
+		.Account_btn
+		{
+			color: rgba(255, 255, 255, 1.0);
+			font-family: "Pt_Sans", serif;
+			font-size: 1em;
+			position: relative;
+			top: 5vh;
+			left: -3vw;
+		}		
+	/*Akhir bagian tombol Navigasi*/
+
+/*Bagian akhir header*/
+
+/*Bagian body*/
+.body_container
+{
+	background-color: rgba(255, 255, 255, 1.0);
+	position: relative;
+	border-radius: 20px;
+	top: -11vh;
+	height: 100vh;
+	width: 100%;
+}
+
+.Description_number
+{
+	border-bottom: .1em solid hsla(30, 10%, 10%, 0.7);
+	box-shadow: 0vw 0.7vh 0.5em 0.1em hsla(10, 0%, 45%, 0.4);
+	padding-top: 1.2vh;
+	padding-left: 100%;
+	padding-bottom: 1.2vh;
+	margin-top: 4vh;
+	/*margin-top: 8vh;*/
+	top: -4vh;
+	position: absolute;
+}
+/*Akhir bagian body*/
+	
+	/*Bagian footer*/
+		.Presence_page_footer
+		{
+			width: 100%;
+			height: 20vh;
+			background: linear-gradient(30deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0));
+			position: relative;
+			bottom: -47vh;
+			/*z-index: 2;*/
+		}
+	/*Akhir bagian footer*/
+
+/*Bagian keterangan*/
+/*Link untuk mengubah tanggal*/
+.Change_date
+{
+	width: 3vw;
+	height: 6vh;
+	display: inline-block;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	padding-left: 0.8vw;
+	padding-right: 0.8vw;
+	border-radius: 10px;
+	float: left;
+	position: relative;
+	top: 15vh;
+	left: 93vw;
+	transform: translateY(-1vh);
+}
+/*Bagian akhir link untuk mengubah tanggal*/
+
+/*Bagian judul keterangan*/
+	.Number
+	{
+		display: inline-block;
+		list-style: none;
+		position: absolute;
+		top: 1vh;
+		left: -6vw;
+		line-height: center;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1em;
+		font-weight: bold;
+		color: hsla(10, 30%, 10%, 0.8);
+	}
+
+	.Date
+	{
+		display: inline-block;
+		list-style: none;
+		position: absolute;
+		top: 1vh;
+		left: -1.2vw;
+		line-height: center;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1em;
+		font-weight: bold;
+		color: hsla(10, 30%, 10%, 0.8);
+	}
+
+	.Time
+	{
+		display: inline-block;
+		list-style: none;
+		position: absolute;
+		top: 1vh;
+		left: 20vw;
+		line-height: center;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1em;
+		font-weight: bold;
+		color: hsla(10, 30%, 10%, 0.8);
+	}
+
+	.Teacher_name
+	{
+		display: inline-block;
+		list-style: none;
+		position: relative;
+		top: -0.4vh;
+		/*bottom: 1vh;*/
+		right: 60vw;
+		line-height: center;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1em;
+		font-weight: bold;	
+		color: hsla(10, 30%, 10%, 0.8);
+		/*background-color: red;
+		z-index: 20;*/
+	}
+
+	.Status
+	{
+		display: inline-block;
+		list-style: none;
+		position: absolute;
+		top: 1vh;
+		bottom: 1vh;
+		left: 64vw;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1em;
+		font-weight: bold;
+		color: hsla(10, 30%, 10%, 0.8);
+	}
+/*Akhir bagian judul keterangan*/
+
+	/*Macam - macam keterangan inti pertama*/
+		.Desription_container
+		{
+			position: relative;
+			top: 20vh;
+			left: 8vw;
+		}
+			.Number_desc
+			{	
+				position: absolute;
+				font-family: 'Raleway', sans-serif; 
+				font-size: 1rem;
+				left: 5vw;
+				top: 10vh;
+				display: inline;
+			}
+		.Day_desc
+		{
+			position: absolute;
+			font-family: 'Raleway', sans-serif; 
+			font-size: 1rem;
+			float: right;
+			clear: left;
+			left: 9.5vw;
+			top: 10vh;
+			display: inline;
+		}	
+
+		.Duration_desc
+		{	
+			position: absolute;
+			font-family: 'Raleway', sans-serif; 
+			font-size: 1rem;
+			float: left;
+			clear: right;
+			left: 30vw;
+			top: 10vh;
+			display: inline;
+		}		
+
+		.Teacher_desc
+		{
+			position: absolute;
+			font-family: 'Raleway', sans-serif;
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, 0.8);
+			float: right;
+			left: 48vw;
+			top: 10vh;
+			display: inline;
+		}
+
+		.Presence_desc
+		{
+			position: absolute;
+			font-family: 'Raleway', sans-serif;
+			font-size: 0.9rem;
+			font-weight: bold;
+			color: hsla(200, 100%, 50%, 1.0);
+			float: right;
+			left: 75vw;
+			top: 10vh;
+			display: inline;
+		}
+	/*Bagian akhir keterangan inti*/
+
+/*Macam - macam keterangan inti kedua*/
+	.Container_margin
+	{
+		position: relative;
+		top: -94vh;
+	}
+
+	.Description_number2
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 5vw;
+		display: inline;
+	}
+
+	.Description_day2
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		left: 9.5vw;
+		display: inline;
+	}
+
+	.Description_time2
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		left: 30vw;
+		display: inline;	
+	}
+
+	.Description_teacher_name2
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(10, 10%, 50%, 0.8);
+		float: right;
+		left: 48vw;
+		display: inline;
+	}
+
+	.Description_presence2
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+		float: right;
+		left: 75vw;
+		display: inline;
+	}
+/*Bagian akhir keterangan inti kedua*/
+
+	/*Macam - macam keterangan inti ketiga*/
+	.Wrapper_container
+	{
+		position: relative;
+		top: -85vh;
+	}
+
+	.Description_number3
+	{	
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 5vw;
+		display: inline;
+	}
+
+	.Date_number3
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 9.5vw;
+		display: inline;		
+	}
+
+	.Time_number3
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 30vw;
+		display: inline;	
+	}
+
+	.Teacher_name_number3
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(10, 10%, 50%, 0.8);
+		float: right;
+		left: 48vw;
+		display: inline;
+	}
+
+	.Presence_number3
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+		float: right;
+		left: 75vw;
+		display: inline;
+	}
+	/*Akhir bagian keterangan inti ketiga*/
+
+/*Bagian keterangan inti keempat*/
+.Distance_wrapper
+{
+	position: relative;
+	top: -76vh;
+}
+
+.Number_description4
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 5vw;
+	display: inline;
+}
+
+.Date_Description4
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 9.5vw;
+	display: inline;	
+}
+
+.Time_Description4
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 30vw;
+	display: inline;		
+}
+
+.Teacher_Name_Description4
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: hsla(10, 10%, 50%, 0.8);
+	float: right;
+	left: 48vw;
+	display: inline;
+}
+
+.Presence_Description4
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: hsla(200, 100%, 50%, 1.0);
+	float: right;
+	left: 75vw;
+	display: inline;		
+}
+/*Akhir bagian keterangan inti keempat*/
+	
+	/*Macam - macam keterangan inti kelima*/
+	.Screen_Wrapper
+	{
+		position: relative;
+		top: -67vh;
+	}
+
+	.Number_desc5
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 5vw;
+		display: inline;
+	}
+
+	.Date_desc5
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 9.5vw;
+		display: inline;	
+	}
+
+	.Duration_Time_desc5
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 30vw;
+		display: inline;		
+	}
+
+	.Teacher_Name_desc5
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(10, 10%, 50%, 0.8);
+		float: right;
+		left: 48vw;
+		display: inline;
+	}
+
+	.Presence_desc5
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+		float: right;
+		left: 75vw;
+		display: inline;		
+	}
+	/*Bagian akhir keterangn inti kelima*/
+
+/*Macam - macam keterangana inti*/
+.Wrapper_viewport
+{
+	position: relative;
+	top: -58vh;
+}
+
+.Number_Description6
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 5vw;
+	display: inline;
+}
+
+.Date_Description6
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 9.5vw;
+	display: inline;	
+}
+
+.Time_Description6
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif; 
+	font-size: 1rem;
+	left: 30vw;
+	display: inline;		
+}
+
+.Teacher_Description6
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: hsla(10, 10%, 50%, 0.8);
+	float: right;
+	left: 48vw;
+	display: inline;
+}
+
+.Presence_Description6
+{
+	position: absolute;
+	font-family: 'Raleway', sans-serif;
+	font-size: 0.9rem;
+	font-weight: bold;
+	color: hsla(200, 100%, 50%, 1.0);
+	float: right;
+	left: 75vw;
+	display: inline;		
+}
+/*Bagian akhir keterangan inti keenam*/
+	
+	/*Bagian keterangan inti ketujuh*/
+	.Width_Wrapper
+	{
+		position: relative;
+		top: -50vh;
+	}
+
+	.Number_ls_desc
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif; 
+		font-size: 1rem;
+		left: 5vw;
+		display: inline;
+	}
+
+	.Date_ls_desc
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		left: 9.5vw;
+		display: inline;
+	}
+
+	.Time_ls_desc
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		left: 30vw;
+		display: inline;		
+	}
+
+	.Teacher_ls_name_desc
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+		font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(10, 10%, 50%, 0.8);
+		float: right;
+		left: 48vw;
+		display: inline;
+	}
+
+	.Presence_ls_desc
+	{
+		position: absolute;
+		font-family: 'Raleway', sans-serif;
+      	font-size: 0.9rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+		float: right;
+		left: 75vw;
+		display: inline;													
+	}
+	/*Bagian akhir keterangan inti ketujuh*/

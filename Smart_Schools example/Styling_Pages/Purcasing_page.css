@@ -1,0 +1,772 @@
+body
+{   
+	padding: 0;		
+	margin: 0;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+/*Bagian CSS Variable*/
+	:root
+	{	
+		/*Variable untuk bagian icon pada top bar*/
+		--Icon-Color: hsla(0, 120%, 70%, 1.0);
+		/*Akhir baris Variable bagian icon pada top bar*/
+
+			/*Variable untuk warna putih*/
+			--Bg-White: rgba(255, 255, 255, 1.0);
+			--Bg-White-Lite: rgba(255, 255, 255, .5);
+			/*/*Bagian akhir Variable untuk warna putih*/
+
+		/*Variable untuk header*/
+			/*Variable untuk (Font Style) pada top bar "Pembayaran"*/
+			--Title_Header_Font:  'Lato', sans-serif;
+			/*Akhir Variable untuk (Font Style)*/
+
+			/*Variable untuk (Box-shadow)  pada top bar "Pembayaran" */
+			--Shadow_Title_Header: 0.5vw 0.4vh 0.6vh hsla(220, 10%, 10%, 0.9);
+			/*Akhir Variable untuk (Box-Shadow) */
+		/*Akhir Variable untuk bagian header*/
+	}
+
+:root
+{
+	/*Variable pada bagian hover*/
+	--Hover_Background_Transform: scale(1, 1) translateY(-.9vh);
+		/*Variable untuk Cursor Pointer*/
+		--Point_Device: pointer;
+		/*Bagian akhir Variable untuk Cursor Pointer*/
+	/*Akhir Variable pada bagian hover*/
+}	
+/*Akhir baris CSS Variable*/
+
+
+/*@font-face untuk judul*/
+	@font-face
+	{
+		font-family: "Pt_Sans", serif;
+		src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+	}
+/*Baris akhir @font-face untuk judul*/
+
+/*Bagian scroll Bar*/
+	/* width */
+	::-webkit-scrollbar
+	{
+	  width: .8em;
+	  height: .4rem;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+	{
+	  background: hsla(0, 120%, 70%, 0.8);
+	  border-radius: 1ex;
+	}
+
+	/*Hover*/
+	::-webkit-scrollbar-thumb:hover
+	{
+	  background: hsla(17, 46%, 34%, .9);
+	}
+/*Akhir bagian scroll Bar*/
+
+
+/*Bagian top bar*/
+	.Purcasing_top_bar
+	{
+		width: 100%;
+		height: 50vh;
+		background: linear-gradient(30deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0));
+		position: relative;
+		top: -7vh;
+	}
+
+	.title_header
+	{	
+		text-shadow: var(--Shadow_Title_Header);
+		color: var(--Bg-White);
+		font-family: "Pt_Sans", serif;
+		font-size: 2.5rem;
+		font-weight: bold;
+		/*text-align: center;*/
+		position: absolute;
+		top: 2vh;
+		left: 38vw;
+	}
+
+	.Desc_title_nav
+	{
+		font-family: 'Raleway', sans-serif;
+		font-size: 1.3em;
+		position: absolute;
+		top: 8vh;
+		left: 5vw;
+		color: rgba(255, 255, 255, 1.0);
+	}
+		/*Bagian riwayat pembayaran*/
+			.New_Purcasing
+			{	
+				font-family: "Pt_Sans", serif;
+				font-size: 1.4em;
+				font-weight: bold;
+				text-align: center;
+				line-height: center;
+				transform: translateY(1rem);
+				position: absolute;
+				top: 31vh;
+				left: 5vw;
+				background-color: var(--Bg-White);
+				color: hsla(220, 90%, 40%, 0.8);
+				display: inline-block;
+				padding-top: 1vh;
+				padding-bottom: 1vh;
+				padding-right: 1vw;
+				padding-left: 1vw;
+				border-radius: .3em;
+				box-sizing: border-box;
+			}
+
+			.Old_Purcasing
+			{
+				float: right;
+				font-family: "Pt_Sans", serif;
+				font-size: 1.4em;
+				font-weight: bold;
+				text-align: center;
+				line-height: center;
+				transform: translateY(1rem);
+				position: absolute;
+				top: 31vh;
+				left: 40vw;
+				background-color: var(--Bg-White);
+				color: hsla(220, 90%, 40%, 0.8);
+				display: inline-block;
+				padding-top: 1vh;
+				padding-bottom: 1vh;
+				padding-right: 1vw;
+				padding-left: 1vw;
+				border-radius: .3em;
+				box-sizing: border-box;
+			}
+
+			.Purcasing_Order
+			{
+				float: right;
+				font-family: "Pt_Sans", serif;
+				font-size: 1.4em;
+				font-weight: bold;
+				text-align: center;
+				line-height: center;
+				transform: translateY(1rem);
+				position: absolute;
+				top: 31vh;
+				left: 70vw;
+				background-color: var(--Bg-White);
+				color: hsla(220, 90%, 40%, 0.8);
+				display: inline-block;
+				padding-top: 1vh;
+				padding-bottom: 1vh;
+				padding-right: 1vw;
+				padding-left: 1vw;
+				border-radius: .3em;
+				box-sizing: border-box;
+			}
+
+		.Monthly_Payment
+		{
+			position: absolute;
+			top: 19vh;
+			left: 5vw;
+			transform: translateY(4rem);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1em;
+			color: var(--Bg-White);
+			display: block;
+		}
+
+		.Payment_Amount
+		{
+			position: absolute;
+			top: 19vh;
+			left: 40vw;
+			transform: translateY(4rem);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1em;
+			color: var(--Bg-White);
+			display: block;
+		}
+
+		.Payment_Status
+		{
+			position: absolute;
+			top: 19vh;
+			left: 70vw;
+			transform: translateY(4rem);
+			font-family: "Pt_Sans", serif;
+			font-size: 1.1em;
+			color: var(--Bg-White);
+			display: block;
+		}
+		/*Bagian akhir riwayat pembayaran*/
+/*Akhi bagian top bar*/
+
+/*Bagian Navigasi*/
+	.nav_icon, li
+	{
+		position: relative;
+		top: -0.5vh;
+		display: inline-block;
+		list-style: none;
+		margin-left: 11vw;
+		transform: translateY(8vh);
+	}
+
+	.icon_nav
+	{	
+		cursor: var(--Point_Device);
+		width: 3vw;
+		box-sizing: border-box;
+		position: absolute;
+		top: -2vh;
+		left: -3vw;
+		bottom: 0.0.04vh;
+		background-color: rgba(255, 255, 255, 1.0);
+		border-radius: 0.6em;
+		padding: 1vh;
+		border: 0.2em solid rgba(255, 255, 255, 1.0);
+		z-index: 2;
+	}
+
+	.bg-colors	
+	{
+		width: 3vw;
+		box-sizing: border-box;
+		position: relative;
+		bottom: 1.7vh;
+		left: -3vw;
+		background-color: var(--Bg-White-Lite);
+		border-radius: 0.6em;
+		padding: 2vh;
+		transform: var(--Hover_Background_Transform);
+	}
+
+		/*Bagian hover untuk icon icon*/
+		.icon_nav:hover
+		{
+			transform: scale(1.2, 1.2) translateY(-.8rem);
+			transition: 2s;
+			background: var(--Icon-Color);
+		}
+		/*Akhir bagian untuk hover*/
+
+
+.home_icon_btn
+{
+	color: var(--Bg-White);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: relative;
+	top: 5vh;
+	left: -3vw;
+}	
+
+.chat_icon_btn
+{
+	color: var(--Bg-White);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: relative;
+	top: 5vh;
+	left: -3vw;
+}
+
+.Notification_icon_btn
+{
+	color: var(--Bg-White);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: relative;
+	top: 5vh;
+	left: -3.5vw;
+}
+
+.Account_icon_btn
+{
+	color: var(--Bg-White);
+	font-family: "Pt_Sans", serif;
+	font-size: 1em;
+	position: relative;
+	top: 5vh;
+	left: -3vw;
+}
+/*Akhir bagian Navigasi*/
+
+/*Bagian Body*/
+.Container_purcash
+{
+	position: relative;
+	background-color: var(--Bg-White);
+	border-top-left-radius: 2em;
+	top: -10vh;
+	height: 100vh;
+	width: 100%;
+}
+
+	/*Bagian keterangan pembayaran*/
+
+		/*Bagian pembayaran Bulan pertama*/
+		.Payment_1
+		{
+			position: relative;
+			top: 2vh;
+			left: 0;
+			border-bottom: .1em solid hsla(10, 12%, 60%, .6);
+			padding-top: 12vh;
+		}	
+	.Month_Payment		
+	{
+		position: absolute;
+		top: 4vh;
+		left: 5vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: .8rem;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);
+	}
+
+	.Total_Payment
+	{
+		position: absolute;
+		top: 4vh;
+		left: 40vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);
+	}
+
+	.Status_Payment
+	{
+		position: absolute;
+		top: 4vh;
+		left: 70vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+	}	
+	/*Bagian akhir Bulan pertama*/
+
+		/*Pembayaran Bulan kedua*/
+			.Payment_2
+			{
+				position: relative;
+				top: 3vh;
+				left: 0;
+				border-bottom: .1em solid hsla(10, 12%, 60%, .6);
+				padding-top: 12vh;
+			}	
+
+		.Month_Payment2
+		{
+			position: absolute;
+			top: 4vh;
+			left: 5vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: .8rem;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);		
+		}
+
+		.Total_Payment2
+		{
+			position: absolute;
+			top: 4vh;
+			left: 40vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);
+		}
+
+		.Status_Payment2
+		{
+			position: absolute;
+			top: 4vh;
+			left: 70vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);	
+		}
+		/*Bagian akhir pembayaran Bulan kedua*/
+	
+	/*Pembayaran Bula ketiga*/
+		.Payment_3
+		{
+			position: relative;
+			top: 3vh;
+			left: 0;
+			border-bottom: .1em solid hsla(10, 12%, 60%, .6);
+			padding-top: 12vh;
+		}
+
+		.Month_Payment3
+		{
+			position: absolute;
+			top: 4vh;
+			left: 5vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 0.8em;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);
+		}
+
+		.Total_Payment3
+		{
+			position: absolute;
+			top: 4vh;
+			left: 40vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 65%, 10%, .8);
+		}
+
+		.Status_Payment3
+		{
+			position: absolute;
+			top: 4vh;
+			left: 70vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(200, 100%, 50%, 1.0);	
+		}
+	/*Bagian akhir pembayaran Bulan ketiga*/
+
+	/*Bagian pembayaran Bulan keempat*/
+		.Payment_4
+		{
+			position: relative;
+			top: 3vh;
+			left: 0;
+			border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+			padding-top: 12vh;
+		}
+
+		.Month_Payment4
+		{
+			position: absolute;
+			top: 4vh;
+			left: 5vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: .8em;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);	
+		}
+
+		.Total_Payment4
+		{
+			position: absolute;
+			top: 4vh;
+			left: 40vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);
+		}
+
+		.Status_Payment4
+		{
+			position: absolute;
+			top: 4vh;
+			left: 70vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);
+		}
+
+	/*Bagian akhir pembayaran Bulan keempat*/
+
+/*Keterangan pembayaran Bulan kelima*/
+	.Payment_5
+	{
+		position: relative;
+		top: 3vh;
+		left: 0;
+		border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+		padding-top: 12vh;
+	}
+
+	.Month_Payment5
+	{
+		position: absolute;
+		top: 4vh;
+		left: 5vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: .8em;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);	
+	}
+
+	.Total_Payment5
+	{
+		position: absolute;
+		top: 4vh;
+		left: 40VW;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);
+	}
+
+	.Status_Payment5
+	{
+		position: absolute;
+		top: 4vh;
+		left: 70vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+	}
+/*Bagian akhir pembayaran Bulan kelima*/
+	
+	/*Keterangan pembayaran Bulan keenam*/
+		.Payment_6
+		{
+			position: relative;
+			top: 3vh;
+			left: 0;
+			border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+			padding-top: 12vh;
+		}
+
+		.Month_Payment6
+		{
+			position: absolute;
+			top: 4vh;
+			left: 5vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: .8em;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);
+		}
+
+		.Total_Payment6
+		{
+			position: absolute;
+			top: 4vh;
+			left: 40vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);
+		}
+
+		.Status_Payment6
+		{
+			position: absolute;
+			top: 4vh;
+			left: 70vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(200, 100%, 50%, 1.0);
+		}
+	/*Bagian akhir pembayaran Bulan keenam*/
+
+/*Keterangan pembayaran Bulan ketujuh*/
+	.Payment_7
+	{
+		position: relative;
+		top: 3vh;
+		left: 0;
+		border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+		padding-top: 12vh;
+	}
+
+	.Month_Payment7
+	{
+		position: absolute;
+		top: 4vh;
+		left: 5vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: .8em;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);
+	}
+
+	.Total_Payment7
+	{
+		position: absolute;
+		top: 4vh;
+		left: 40vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(30, 65%, 10%, 1.0);
+	}
+
+	.Status_Payment7
+	{
+		position: absolute;
+		top: 4vh;
+		left: 70vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+	}
+/*Bagian akhir pembayaran Bulan ketujuh*/
+	
+	/*Bagian Pembayaran Buku Paket*/
+		.Book_Wrapper
+		{
+			position: relative;
+			top: 3vh;
+			left: 0;
+			border-bottom: 0.1em solid hsla(10, 20%, 60%, .6);
+			padding-top: 12vh;
+		}
+
+		.Package_Book
+		{
+			position: absolute;
+			top: 4vh;
+			left: 5vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: .8em;
+			font-weight: bold;
+			color: hsla(30, 65%, 10%, 1.0);
+		}
+
+		.Book_Price
+		{
+			position: absolute;
+			top: 4vh;
+			left: 40vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);
+		}
+
+		.Payment_Check	
+		{
+			position: absolute;
+			top: 4vh;
+			left: 70vw;
+			font-family: 'Raleway', sans-serif;
+			font-size: 1rem;
+			font-weight: bold;
+			color: hsla(10, 10%, 50%, .8);
+		}
+
+	/*Akhir pembayaran Buku paket*/
+
+		/*Bagian pembayaran seragam olahraga*/
+			.Sport_Uniform_wrapper
+			{
+				position: relative;
+				top: 3vh;
+				left: 0;
+				border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+				padding-top: 12vh;
+			}
+
+			.Sport_Uniform
+			{	
+				position: absolute;	
+				top: 4vh;
+				left: 5vw;
+				font-family: 'Raleway', sans-serif;
+				font-size: .8em;
+				font-weight: bold;
+				color: hsla(30, 65%, 10%, 1.0);
+			}
+
+			.Sport_Uniform_price
+			{
+				position: absolute;
+				top: 4vh;
+				left: 40vw;
+				font-family: 'Raleway', sans-serif;
+				font-size: 1rem;
+				font-weight: bold;
+				color: hsla(35, 65%, 10%, 1.0);
+			}
+
+			.Sport_Uniform_Status_Payment
+			{
+				position: absolute;
+				top: 4vh;
+				left: 70vw;
+				font-family: 'Raleway', sans-serif;
+				font-size: 1rem;
+				font-weight: bold;
+				color: hsla(200, 100%, 50%, 1.0);
+			}
+		/*Akhir pembayaran seragam olahraga*/
+
+/*Bagian pembayaran seragam Tapak suci*/
+	.Tapak_suci_uniform_wrapper
+	{
+		position: relative;
+		top: 3vh;
+		left: 0;
+		border-bottom: .1em solid hsla(10, 20%, 60%, .6);
+		padding-top: 12vh;
+	}
+
+	.Tapak_suci_uniform
+	{
+		position: absolute;
+		top: 4vh;
+		left: 5vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: .8em;
+		font-weight: bold;
+		color: hsla(35, 65%, 10%, 1.0);
+	}
+
+	.Tapak_suci_uniform_price
+	{
+		position: absolute;
+		top: 4vh;
+		left: 40vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(35, 65%, 10%, 1.0);
+	}
+
+	.Tapak_suci_payment_status
+	{
+		position: absolute;
+		top: 4vh;
+		left: 70vw;
+		font-family: 'Raleway', sans-serif;
+		font-size: 1rem;
+		font-weight: bold;
+		color: hsla(200, 100%, 50%, 1.0);
+	}
+/*Akhir pembayaran seragam Tapak suci*/
+
+	/*Bagian akhir keterangan pembayaran*/
+/*Bagian akhir body*/
+
+
+	/*Bagian Footer*/
+	.Bottom_Footer
+	{
+		width: 100%;
+		height: 20vh;
+		background: linear-gradient( 30deg, rgba(120, 150, 200, 1.0), rgba(30, 60, 150, 1.0) );
+		position: relative;
+		bottom: -47vh;
+	}
+	/*Akhir bagian footer*/

@@ -1,0 +1,493 @@
+body
+{
+	padding: 0;
+	margin-left: 0;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+/*Bagian CSS Variable*/
+:root
+{
+	--Header_Background: linear-gradient( 30deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0) );	
+	--Footer-Bacgkround: linear-gradient( 30deg, rgba(120, 200, 240, 1.0), rgba(100, 80, 200, 1.0) );
+	--Text-Color-Fill: rgba(255, 255, 255, 1.0);
+	--Pointer: pointer;
+	--Sizing-Box: border-box;
+	--Bg-White-Lite: rgba(255, 255, 255, .5);
+
+	/*Variable bagian navigasi*/
+	--Icon-Color: hsla(0, 120%, 70%, 1.0);
+	/*Baris akhir variable navigasi*/
+
+	/*Variable untuk position*/
+	--Position-Absolute: absolute;
+	--Position-Relative: relative;
+	/*Baris akhir variable untuk position*/
+}
+/*Akhir bagian CSS Varible*/
+
+/*Bagian scroll Bar*/
+	/* width */
+	::-webkit-scrollbar
+	{
+	  width: .8em;
+	  height: .4rem;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+	{
+	  background: hsla(0, 120%, 70%, 0.8);
+	  border-radius: 1ex;
+	}
+
+	/*Hover*/
+	::-webkit-scrollbar-thumb:hover
+	{
+	  background: hsla(17, 46%, 34%, .9);
+	}
+/*Akhir bagian scroll Bar*/
+
+/*Bagian top bar*/
+	header.Top_bar_Timetable
+	{
+		position: relative;
+		width: 100%;
+		height: 50vh;
+		top: -5vh;
+		background: var(--Header_Background);
+		padding-left: 2vw;
+		/*transform: translateX(10px);*/
+	}
+
+	.Main_title
+	{
+		position: absolute;
+		left: 38vw;
+		top: 0.5vh;
+		color: var(--Text-Color-Fill);
+		text-shadow: 0.5vw 0.4vh 0.6vh hsla(220, 10%, 10%, .9) ;
+		font-family: "Pt_Sans", serif;
+		font-weight: 300;
+		font-size: 2.6em;
+		font-weight: bold;
+		text-align: center;
+	}
+
+		/*Bagian Navigasi*/
+		.nav_icons, li
+		{	
+			display: flex;
+			flex-direction: row;
+			position: relative;
+			justify-content: center;
+			align-items: center;
+			top: -15vh;
+			left: 16vw;
+			display: inline-block;
+			list-style: none;
+			margin-left: 20ex;
+			padding-right: 4vw;
+			transform: translateX(-4vw) translateY(17vh);
+		}
+
+		.icon_navigation_size
+		{	
+			cursor: var(--Pointer);
+			width: 3vw;
+			box-sizing: var(--Sizing-Box);
+			position: var(--Position-Relative);
+			top: -2vh;
+			left: -3vw;
+			/*bottom: 0.0.04vh;*/
+			background-color: rgba(255, 255, 255, 1.0);
+			border-radius: 0.6em;
+			padding: 1vh;
+			border: 0.2em solid rgba(255, 255, 255, 1.0);
+			z-index: 2;
+		}
+
+		.Text_Link
+		{
+			/*font-family: ;*/
+			color: var(--Text-Color-Fill);
+			font-size: 1rem;
+			position: relative;
+			top: -1.3vh;
+			left: -3vw;
+			font-family: "Pt_Sans", serif;
+			font-weight: 300;
+		}
+
+		.Text_Link + section.bg-coolors
+		{
+			width: 3vw;
+			box-sizing: var(--Sizing-Box);
+			position: var(--Position-Relative);
+			bottom: 1.7vh;
+			left: -3vw;
+			background-color: var(--Bg-White-Lite);
+			border-radius: 0.6em;
+			padding: 2vh;
+			/*transform: var(--Hover_Background_Transform);*/
+			transform: translateY(-8vh);
+		}
+			/*Bagian hover untuk icon icon*/
+			.icon_navigation_size:hover
+			{
+				transform: scale(1.2, 1.2) translateY(-.8rem);
+				transition: 2s;
+				background: var(--Icon-Color);
+			}
+			/*Akhir bagian untuk hover*/
+
+		/*Akhir bagian Navigasi*/
+
+		/*Bagian daftar nama hari*/
+			#Timetable_list, li
+			{	
+				/*display: flex;*/
+				display: inline-block;
+				position: relative;
+				top: 32vh;
+				left: 10vw;
+				transform: translateX(-5vw) translateY(-18vh);
+				transform-origin: 0;
+				padding-left: 2vw;
+				margin-left: 1vw;
+			}
+				/*Hari Senin*/
+					#Monday_Timetable
+					{
+						position: absolute;
+						top: 1.4vh;
+						left: -5vw;
+						color: var(--Text-Color-Fill);
+						font-family: "Pt_Sans", serif;
+						font-weight: normal;
+						font-size: 1.5em;
+					}
+
+					#Tuesday_Timetable
+					{
+						position: absolute;
+						top: 1vh;
+						left: 7vw;
+						color: hsla(100, 100%, 100%, 1.0);
+						font-family: "Pt_Sans", serif;
+						font-weight: normal;
+						font-size: 1.6em;
+					}
+
+					#Wednesday_Timetable
+					{
+						position: absolute;
+						top: 1vh;
+						left: 2000%, 1.0);
+						font-family: "Pt_Sans", serif;
+						font-weight: normal;
+						font-size: 1.6em;
+					}
+
+					#Thursday_Timetable
+					{
+						position: absolute;
+						top: 1vh;
+						left: 38vw;
+						color: hsla(100, 100%, 100%, 1.0);
+						font-family: "Pt_Sans", serif;
+						font-weight: normal;
+						font-size: 1.6em;
+					}
+
+					#Friday_Timetable
+					{
+						position: absolute;
+						top: 1vh;
+						left: 50vw;
+						color: hsla(100, 100%, 100%, 1.0);
+						font-family: "Pt_Sans", serif;
+						/*font-weight: none;*/
+						font-size: 1.6em;
+					}
+				/*Akhir hari Senin*/
+		/*Akhir bagian nama hari*/
+/*Bagian akhir top bar*/
+
+/*Bagian jadwal pelajaran*/
+	.Subjects_Wrapper
+	{
+		position: relative;
+		top: 7vh;
+	}
+
+	.Subject_title
+	{
+		position: absolute;
+		/*top: 21.6vh;*/
+		left: 8vw;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1.5em;
+		color: hsla(30, 70%, 10%, 0.9);
+	}	
+		/*Bagian @font-face*/
+			@font-face
+			{
+				font-family: "Pt_Sans", serif;
+				src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+			}
+		/*Akhr bagian @font_face*/
+
+	.Date_Desc_Wrapper
+	{
+		position: relative;
+		top: 2vh;
+		left: 77vw;
+	}
+
+	.Date_desc
+	{
+		position: absolute;
+		float: right;
+		font-family: "Pt_Sans", serif;
+		font-weight: bold;
+		font-size: 1.2em;
+		color: hsla(200, 100%, 50%, 1.0);
+	}		
+		/*Bagian @font-face*/
+			@font-face
+			{
+				font-family: "Pt_Sans", serif;
+				src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+			}
+		/*Akhir bagian @font-face*/
+
+/*Akhir bagian jadwal pelajaran*/
+
+/*Bagian mata pelajaran*/
+
+	/*Untuk bagian @font-face*/
+		@font-face
+		{
+			font-family: "Pt_Sans", serif;
+			src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+		}
+	/*Bagian akhir @font-face*/
+
+
+		/*Bagian pembungkus mata pelajaran ke 1*/
+		.Subject_body_wrapper
+		{
+			position: relative;
+			left: 7vw;
+			top: -88vh;
+		}	
+		/*Akhir bagian pembunkus mata pelajaran ke 1*/
+
+	/*Bagian nama mata pelajaran*/
+		.Date_1
+		{
+			position: relative;
+			font-size: 1.1em;
+			font-family: Pt_Sans;
+			color: hsla(40, 20%, 40%, .5);
+		}
+	/*Akhir bagian mata pelajaran*/
+
+	/*Bagian nama Guru pelajaran*/
+		.Subjects_Teacher
+		{
+			position: absolute;
+			font-family: "Pt_Sans";
+			font-size: .8em;
+			color: hsla(40, 20%, 40%, .5);
+			left: 1vw;
+		}
+	/**Akhir bagian nama Guru/
+
+
+	/*Lama durasi pelajaran*/
+		.Subjects_duration
+		{
+			position: absolute;
+			top: 1vh;
+			left: 78vw;
+			float: right;
+			font-size: 1.1em;
+			font-family: Pt_Sans;
+			color: hsla(40, 20%, 40%, .5);
+		}
+	/*Bagian akhir durasi*/
+
+/*Bagian pembungkus mata pelajaran ke 2*/
+.Subject_body_wrapper01
+{
+	position: relative;
+	left: 7vw;
+	top: -70vh;
+}
+
+/*Bagian nama mata pelajaran*/
+	.Date_2
+	{
+		position: relative;
+		top: -3vh;
+		font-size: 1.1em;
+		color: hsla(40, 20%, 40%, .5);
+		font-family: "Pt_Sans";
+	}
+/*Bagian akhir nama mata pelajaran*/
+
+/*Bagian nama guru mata pelajaran*/
+	.Subjects_Teacher02
+	{
+		position: absolute;
+		font-size: .8em;
+		font-family: "Pt_Sans";
+		color: hsla(40, 20%, 40%, .5);
+		top: 1vh;
+		left: 1vw;
+	}
+/*Akhir bagian nama guur mata pelajaran*/
+
+/*Lama durasi pelajaran*/
+	.Subjects_duration02
+	{
+		position: absolute;
+		top: -1.6vh;
+		left: 78vw;
+		float: right;
+		font-size: 1.1em;
+		font-family: Pt_Sans;
+		color: hsla(40, 20%, 40%, .5);
+	}
+/*Bagian akhir durasi pelajaran*/
+/*Akhir bagian pembungkus mata pelajaran ke 2*/
+
+	/*Bagian pembungkus jadwal pelajaran ke 3*/
+		.Subject_body_wrapper03
+		{
+			position: relative;
+			left: 7vw;
+			top: -50vh;
+		}
+	/*Akhir bagian pembungkus pelajarn ke 3*/
+
+	/*Bagian mata pelajaran ke 3*/
+		.Date_3
+		{
+			position: relative;
+			font-size: 1.1em;
+			font-family: "Pt_Sans";
+			color: rgba(30, 30, 30, 1.0);
+			top: -3vh;
+		}
+	/*Bagian akhir mata pelajaran ke 3*/
+		.Subjects_Teacher03
+		{
+			position: absolute;
+			left: 1vw;
+			top: 1.6vh;
+			font-size: .8em;
+			font-family: "Pt_Sans";
+			color: hsla(40, 20%, 40%, .5);
+		}
+	/*Bagian nama guru */
+
+	/*Lama durasi pelajaran*/
+		.Subjects_duration03
+		{
+			position: absolute;
+			top: 1vh;
+			left: 78vw;
+			float: right;
+			font-size: 1.1em;
+			font-family: "Pt_Sans";
+			color: rgba(30, 30, 30, 1.0);
+			top: 1.6vh;
+		}
+	/*Bagian akhir durasi pelajaran*/
+
+/*Akhir bagian mata pelajaran*/
+
+/*Bagian body*/
+	.Timetable_wrapper
+	{
+		position: relative;
+		top: -10vh;
+		/*left: .5vw;*/
+		background-color: rgba(255, 255, 255, 1.0);
+		border-radius: 2.2em;
+		height: 125vh;
+		width: 101%;
+	}
+/*Akhir bagian Body*/
+
+		/*Untuk bagian judul link tugas online*/
+			.Online_task_title
+			{
+				position: absolute;
+				height: 15vh;
+				width: 90%;
+				top: 10vh;
+				left: 5vw;
+				margin: auto;
+				border-radius: 0.9em;
+				box-sizing: border-box;
+				background: var(--Header_Background);
+			}
+				.Task_title
+				{
+					position: relative;
+					top: 0.8vh;
+					text-align: center;
+					font-family: "Pt_Sans", serif;
+					font-weight: 300;
+					font-size: 2em;
+					color: rgba(255, 255, 255, 1.0);
+				}
+					/*Untuk bagian @font-face*/
+					@font-face
+					{
+						font-family: "Pt_Sans", serif;
+						src: url('font_Sans/PTSans-Bold.ttf') format('truetype');
+					}
+					/*Bagian akhir @font-face*/
+
+				/*Bagian Logo mata pelajaran*/
+				.Book_icon
+				{
+					position: relative;
+					top: 4vh;
+					left: 2vw;
+					float: left;
+				}
+					/*Class untuk gambar*/
+						.Book_icon_btn
+						{
+							position: absolute;
+						}
+					/*Akhir Class untuk gambar*/
+				/*Bagian akhir Logo mata pelajaran*/
+
+				/*Bagian judul body*/
+				.Subject_title
+				{
+					position: relative;
+				}
+				/*Bagian ahkir judul body*/
+		/*Bagian akhir judul link*/
+
+
+/*Bagian footer*/
+	.Timetable_footer
+	{
+		position: relative;
+		bottom: -47vh;
+		width: 100%;
+		height: 20vh;
+		background: var(--Footer-Bacgkround);
+	}
+/*Bagian akhir footer*/
